@@ -150,3 +150,27 @@ body{
     width: 700px;
     height: 500px;
 }
+
+@media(max-width: 761px){
+    .app h1{
+        font-size: 3.8rem;
+    }
+    .app .search{
+        width: 60%;
+    }
+
+}
+
+@media(max-width: 440px){
+    .app h1{
+        font-size: 3.5rem;
+    }
+    .app .search{
+        width: 80%;
+    }
+
+    .container .card{
+        width: 80%;
+    }
+
+}
