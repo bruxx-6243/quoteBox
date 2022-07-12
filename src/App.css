@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap');
+
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    background: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app h1{
+    font-size: 7rem;
+    font-weight: 400;
+    margin: 2rem 0;
+    text-align: center;
+
+    background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.app .search{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+    margin: 0 auto;
+    /* padding: .75rem; */
+    text-align: center;
+    border: 2px solid #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app .search input{
+    width: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    padding: 0 1rem
+}
+
+.app .search input[type="search"]::-webkit-search-cancel-button{
+    -webkit-appearance: none;     
+}
+
+.app .search .searchBtn{
+    background: #fff;
+    width: 20%;
+    padding: 1rem;
+
+    transition: background .4s;
+    cursor: pointer;
+}
+
+.app .search .searchBtn:hover{
+    background: whitesmoke;
+}
+
+.app .search .searchBtn i{
+    font-size: 1.5rem;
+}
+
+.app .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 0 0 2rem;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 1.5rem;
+    margin-top: 20rem;
+}
+
+.container .card{
+    width: 350px;
+    height:220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #f1f1f1;
+    color: #333;
+    border: 3px solid transparent;
+    padding: 1.5rem;
+    overflow: hidden;
+
+    border-radius: 7px;
+    transition: .4s;
+}
+
+.container .card:hover{
+    border: 3px solid hsl(120, 84%, 34%);
+}
+
+.container .card .text{
+    margin-bottom: 1.5rem;
+}
+
+.container .card a{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    text-decoration: none;
+    color: #333;
+}
+
+.container .card a img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.author{
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.empty{
+    width: 80%;
+    display: flex;
+    justify-content:center;
+
+    margin: 2.5rem auto;
+}
+
+.empty img{
+    width: 700px;
+    height: 500px;
 }
